@@ -42,6 +42,7 @@
       }
     ]
   },
+  "eslintIgnore": ["**/*.js"],
   "browserslist": {
     "production": [
       ">0.2%",

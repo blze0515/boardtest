@@ -96,9 +96,9 @@ task buildReact(type: Exec) {
     inputs.dir "$reactAppDir"
     group = BasePlugin.BUILD_GROUP
     if(System.getProperty('os.name').toLowerCase().contains('windows')) {
-        commandLine "CI=", "npm.cmd", "run-script", "build"
+        commandLine "npm.cmd", "run-script", "build"
     } else {
-        commandLine "CI=", "npm", "run-script", "build"
+        commandLine "npm", "run-script", "build"
     }
 }
 
