@@ -9,7 +9,8 @@ export const getBoards = createAsyncThunk(
                 `/board/board-list`,
                 {
                     headers: {
-                        Authorization: `Bearer ${sessionStorage.getItem("ACCESS_TOKEN")}`
+                        Authorization:
+                            `Bearer ${sessionStorage.getItem("ACCESS_TOKEN")}`
                     },
                     params: {
                         searchCondition: search.searchCondition,
@@ -35,7 +36,8 @@ export const postBoard = createAsyncThunk(
                 board,
                 {
                     headers: {
-                        Authorization: `Bearer ${sessionStorage.getItem("ACCESS_TOKEN")}`,
+                        Authorization:
+                            `Bearer ${sessionStorage.getItem("ACCESS_TOKEN")}`,
                         "Content-Type": "multipart/form-data"
                     }
                 }
@@ -57,7 +59,8 @@ export const removeBoard = createAsyncThunk(
                 `/board/board/${boardNo}`,
                 {
                     headers: {
-                        Authorization: `Bearer ${sessionStorage.getItem("ACCESS_TOKEN")}`
+                        Authorization:
+                            `Bearer ${sessionStorage.getItem("ACCESS_TOKEN")}`
                     }
                 }
             );

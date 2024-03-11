@@ -41,7 +41,8 @@ export const logout = createAsyncThunk(
                 `/user/logout`,
                 {
                     headers: {
-                        Authorization: `Bearer ${sessionStorage.getItem("ACCESS_TOKEN")}`
+                        Authorization:
+                            `Bearer ${sessionStorage.getItem("ACCESS_TOKEN")}`
                     }
                 }
             );
